@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language-addon>
+    <addon-name>qrcode</addon-name>
+    <language-name>xul/html</language-name>
+    <component>
+        <component-name>qrcode</component-name>
+        <extends>label</extends>
+        <component-class>be.chillworld.qrcode.QrCode</component-class>
+    </component>
+</language-addon>

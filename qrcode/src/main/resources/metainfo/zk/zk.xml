@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk>
+    <config-name>qrcode</config-name> 
+    <client-config> 
+ 	<data-handler>
+            <name>qrcode</name>
+            <script src="~./js/jquery.min.js"></script>
+            <script src="~./js/qrcode.js"></script>
+            <script src="~./js/qrcode.min.js"></script>
+            <script>
+                function (wgt, option) {
+                    var createqrcode = function(value) {
+                        wgt.$setValue('');
+                        if (wgt.qrcode!=null) {
+                            wgt.qrcode.clear();
+                            wgt.qrcode.makeCode(value); 
+                        } else {
+                            wgt.qrcode = new QRCode(wgt.$n(),value);
+                        }
+                    }
+                    wgt.setOverride("setValue", createqrcode);
+                    createqrcode(wgt.getValue());
+                }
+            </script>
+        </data-handler>
+    </client-config> 
+
+	<!-- [Optional]
+	Uncomment if you want to defines the application's name 
+	
+    <preference>
+            <name>org.zkoss.zk.ui.WebApp.name</name>
+            <value>datahandler</value>
+    </preference>
+    -->
+	
+</zk>
