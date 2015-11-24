@@ -11,12 +11,25 @@
             <script>
                 function (wgt, option) {
                     wgt.field = option;
+                    if (wgt.getWidth()==null) {
+                        wgt.width = '256';
+                    } else {
+                        wgt.width = wgt.getWidth();
+                    }
+                    if (wgt.getHeight()==null) {
+                        wgt.height = '256';
+                    } else {
+                        wgt.height = wgt.getHeight();
+                    }      
                     var createqrcode = function(value) {
                         if (wgt.qrcode!=null) {
                             wgt.qrcode.clear();
                             wgt.qrcode.makeCode(value); 
                         } else {
-                            wgt.qrcode = new QRCode(wgt.$n(),value);
+                            wgt.qrcode = new QRCode(wgt.$n(), {
+                                                text : value,
+                                                width : wgt.width,
+                                                height : wgt.height});
                         }
                     }
                     wgt.setOverride('set'+ option.charAt(0).toUpperCase() + option.slice(1), createqrcode);
@@ -31,13 +44,25 @@
             <script src="~./js/qrcode.min.js"></script>
             <script>
                 function (wgt, option) {
+                    if (wgt.getWidth()==null) {
+                        wgt.width = '256';
+                    } else {
+                        wgt.width = wgt.getWidth();
+                    }
+                    if (wgt.getHeight()==null) {
+                        wgt.height = '256';
+                    } else {
+                        wgt.height = wgt.getHeight();
+                    }      
                     var createqrcode = function(value) {
-                        wgt.$setValue('');;
                         if (wgt.qrcode!=null) {
                             wgt.qrcode.clear();
                             wgt.qrcode.makeCode(value); 
                         } else {
-                            wgt.qrcode = new QRCode(wgt.$n(),value);
+                            wgt.qrcode = new QRCode(wgt.$n(), {
+                                                text : value,
+                                                width : wgt.width,
+                                                height : wgt.height});
                         }
                     }
                     wgt.setOverride("setValue", createqrcode);
