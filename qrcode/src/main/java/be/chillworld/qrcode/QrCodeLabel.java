@@ -1,17 +1,17 @@
 package be.chillworld.qrcode;
 
 import org.zkoss.zk.ui.ext.AfterCompose;
-import org.zkoss.zul.A;
+import org.zkoss.zul.Label;
 
 /**
  *
  * @author cossaer.f
  */
-public class QrCode extends A implements AfterCompose {
+public class QrCodeLabel extends Label implements AfterCompose {
 
     @Override
     public void afterCompose() {
-        this.setClientAttribute("data-qrcode", "href");
+        this.setClientAttribute("data-qrcodelabel", "value");
     }
 
 }

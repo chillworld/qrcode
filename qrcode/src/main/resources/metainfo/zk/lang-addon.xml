@@ -4,7 +4,12 @@
     <language-name>xul/html</language-name>
     <component>
         <component-name>qrcode</component-name>
-        <extends>label</extends>
+        <extends>a</extends>
         <component-class>be.chillworld.qrcode.QrCode</component-class>
+    </component>
+    <component>
+        <component-name>qrcodelabel</component-name>
+        <extends>label</extends>
+        <component-class>be.chillworld.qrcode.QrCodeLabel</component-class>
     </component>
 </language-addon>

@@ -10,8 +10,29 @@
             <script src="~./js/qrcode.min.js"></script>
             <script>
                 function (wgt, option) {
+                    wgt.field = option;
                     var createqrcode = function(value) {
-                        wgt.$setValue('');
+                        if (wgt.qrcode!=null) {
+                            wgt.qrcode.clear();
+                            wgt.qrcode.makeCode(value); 
+                        } else {
+                            wgt.qrcode = new QRCode(wgt.$n(),value);
+                        }
+                    }
+                    wgt.setOverride('set'+ option.charAt(0).toUpperCase() + option.slice(1), createqrcode);
+                    createqrcode(wgt.get(option));
+                }
+            </script>
+        </data-handler>
+        <data-handler>
+            <name>qrcodelabel</name>
+            <script src="~./js/jquery.min.js"></script>
+            <script src="~./js/qrcode.js"></script>
+            <script src="~./js/qrcode.min.js"></script>
+            <script>
+                function (wgt, option) {
+                    var createqrcode = function(value) {
+                        wgt.$setValue('');;
                         if (wgt.qrcode!=null) {
                             wgt.qrcode.clear();
                             wgt.qrcode.makeCode(value); 
@@ -20,7 +41,7 @@
                         }
                     }
                     wgt.setOverride("setValue", createqrcode);
-                    createqrcode(wgt.getValue());
+                    createqrcode(wgt.get(option));
                 }
             </script>
         </data-handler>
