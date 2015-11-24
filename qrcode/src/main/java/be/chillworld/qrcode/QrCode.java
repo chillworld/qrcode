@@ -11,7 +11,7 @@ public class QrCode extends A implements AfterCompose {
 
     @Override
     public void afterCompose() {
-        this.setClientAttribute("data-qrcode", "href");
+        this.setClientAttribute("data-qrcode-href", "");
     }
 
 }
