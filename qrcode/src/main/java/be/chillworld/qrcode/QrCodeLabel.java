@@ -11,7 +11,7 @@ public class QrCodeLabel extends Label implements AfterCompose {
 
     @Override
     public void afterCompose() {
-        this.setClientAttribute("data-qrcodelabel", "value");
+        this.setClientAttribute("data-qrcode-value", "value");
     }
 
 }

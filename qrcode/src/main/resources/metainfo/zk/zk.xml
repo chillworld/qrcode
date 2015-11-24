@@ -25,7 +25,7 @@
             </script>
         </data-handler>
         <data-handler>
-            <name>qrcodelabel</name>
+            <name>qrcode-value</name>
             <script src="~./js/jquery.min.js"></script>
             <script src="~./js/qrcode.js"></script>
             <script src="~./js/qrcode.min.js"></script>
