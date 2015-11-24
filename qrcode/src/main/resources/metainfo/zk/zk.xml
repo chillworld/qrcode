@@ -53,8 +53,9 @@
                         wgt.height = '256';
                     } else {
                         wgt.height = wgt.getHeight();
-                    }      
+                    }  
                     var createqrcode = function(value) {
+                        wgt.$setValue('');
                         if (wgt.qrcode!=null) {
                             wgt.qrcode.clear();
                             wgt.qrcode.makeCode(value); 
