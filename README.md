@@ -1,5 +1,7 @@
 #Datahandler components for ZK framework.
 
+Usage of : [davidshimjs qrcode on github.](http://davidshimjs.github.io/qrcodejs/)
+
 [Add this jar to your project](http://stackoverflow.com/questions/20161602/loading-maven-dependencies-from-github) and you can use in zul 
 
 `<qrcodelabel value="@load(...)"/>`
