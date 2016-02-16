@@ -39,7 +39,6 @@
         <data-handler>
             <name>qrcode-href</name>
             <script src="~./js/jquery.min.js"></script>
-            <script src="~./js/qrcode.js"></script>
             <script src="~./js/qrcode.min.js"></script>
             <script>
                 function (wgt, option) {
@@ -73,7 +72,6 @@
         <data-handler>
             <name>qrcode-value</name>
             <script src="~./js/jquery.min.js"></script>
-            <script src="~./js/qrcode.js"></script>
             <script src="~./js/qrcode.min.js"></script>
             <script>
                 function (wgt, option) {
